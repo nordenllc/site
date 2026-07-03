@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arlington Commercial Vitality Atlas · Norden</title>
+<meta name="description" content="A civic geospatial atlas for understanding where Arlington's commercial corridors are strong, stressed, and adapting. v0.1 prototype, Rosslyn–Ballston corridor.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231C1B18'/%3E%3Ctext x='16' y='23' font-family='Georgia' font-size='20' fill='%23F0EDE4' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar"></div>
+<div class="wrap">
+
+  <header class="masthead">
+    <a class="wordmark" href="index.html">Norden</a>
+    <div class="tagline">durable infrastructure for public-sector location data</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="masora.html">Masora</a>
+      <a href="atlas.html" class="active">Atlas</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="eyebrow">Project &middot; open data</p>
+    <h1 class="title">Arlington Commercial Vitality Atlas</h1>
+    <p class="subtitle">Where Arlington's commercial corridors are strong, stressed, and adapting.</p>
+
+    <p style="margin:14px 0 22px">
+      <span class="badge">v0.1 prototype</span>
+      <span class="badge">demo seed data</span>
+      <span class="badge">Rosslyn&ndash;Ballston corridor</span>
+    </p>
+
+    <p class="lead">The Atlas is a civic geospatial web app for understanding where Arlington's commercial corridors are strong, stressed, and adapting. It makes the commercial-tax-base challenge spatially legible — not just &ldquo;office vacancy is a problem,&rdquo; but which buildings, parcels, corridors, and reuse opportunities matter most.</p>
+
+    <p>The v0.1 prototype focuses on the Rosslyn&ndash;Ballston corridor and lets users read properties through a set of map modes. It is built as a public-data atlas, not a generic GIS viewer: the goal is a legible picture of a specific civic question, not another blank canvas of layers.</p>
+
+    <h2>Map modes</h2>
+    <p>Each mode re-reads the same corridor through a different question.</p>
+    <ul class="modes">
+      <li><span class="m-name">commercial stress</span><span class="m-desc">Where vacancy, assessment decline, and turnover concentrate.</span></li>
+      <li><span class="m-name">adaptive reuse</span><span class="m-desc">Which buildings are the strongest candidates to become something else.</span></li>
+      <li><span class="m-name">street vitality</span><span class="m-desc">Where the ground floor and the street are active — or aren't.</span></li>
+      <li><span class="m-name">assessment change</span><span class="m-desc">How taxable value is moving, parcel by parcel.</span></li>
+      <li><span class="m-name">active projects</span><span class="m-desc">What is in the development pipeline, and where.</span></li>
+    </ul>
+
+    <h2>Every property has a profile</h2>
+    <p>The Atlas is organized around places, not layers. Select a property and you get a profile: address, corridor, scores, assessment signals, project status, zoning and reuse notes, a confidence level, and the sources behind each value.</p>
+
+<div class="record"><span class="rid">PROPERTY</span>   1400 Wilson Blvd
+corridor            Rosslyn–Ballston
+commercial stress   <span class="warn">●●●○○</span>  elevated
+adaptive reuse      ●●●●○  strong candidate
+street vitality     ●●○○○  low
+assessment change   −12% year over year
+active project      site plan under review
+confidence          medium
+sources             parcels · assessments · zoning · dev-tracking</div>
+    <p class="record-cap">Illustrative profile from demo seed data. Every score carries its sources and a confidence level.</p>
+
+    <p>Confidence and sources sit on the same footing as the scores themselves. An atlas of a contested civic question has to be honest about what it knows, how well it knows it, and where the number came from.</p>
+
+    <h2>From demo data to a reproducible pipeline</h2>
+    <p>The current version uses demo seed data to prove the interface and the product concept. The next serious step is replacing that with a reproducible pipeline built from Arlington public datasets:</p>
+    <ul>
+      <li>parcels and assessments,</li>
+      <li>zoning and adaptive-reuse records,</li>
+      <li>development tracking and active project status,</li>
+      <li>transit proximity,</li>
+      <li>and commercial-place identity resolution — deciding which records describe the same real-world property.</li>
+    </ul>
+    <p>That last step is where the Atlas meets <a href="masora.html">Masora</a>. A parcel, a storefront, an assessment record, and a development application often describe the same place under four different identifiers; resolving them to one stable place identity is what lets a score be about a <em>property</em> rather than a row in one file. The Atlas is, in part, a proving ground for that idea on real public data.</p>
+
+    <div class="note">
+      <span class="note-label">Status</span>
+      <p>This is an early prototype running on demo data, published in the open. The interface and concept are real; the numbers are placeholders until the public-data pipeline lands. We're sharing it now to invite scrutiny, corrections, and conversation — not as a finished product.</p>
+    </div>
+
+    <h2>Why we build this in the open</h2>
+    <p>The data that describes Arlington's commercial future is largely public already. Putting it together into something legible shouldn't require private access or proprietary tooling. We're publishing the Atlas, and intend to publish the pipeline that feeds it, so the picture can be checked, reused, and argued with — which is how civic data earns trust.</p>
+
+    <h2>Get in touch</h2>
+    <p>If you work on Arlington's commercial corridors, public data, or economic development — or you just want to point out where we've got it wrong — we'd like to hear from you.</p>
+    <p><a href="mailto:partners@norden.llc">partners@norden.llc</a></p>
+  </main>
+
+  <footer>
+    Norden &middot; Arlington, Virginia &middot; <a href="mailto:partners@norden.llc">partners@norden.llc</a><br>
+    This page last modified 2026-07-03.
+  </footer>
+
+</div>
+</body>
+</html>
